@@ -1,6 +1,6 @@
 import os
-from get_languages import get_languages
-from path_management import absolute_path, crawl, get_filename_and_specific_directory, retrieve_code_from
+from getting_coding_languages import get_languages
+from managing_file_paths import absolute_path, crawl, get_filename_and_specific_directory, retrieve_code_from
 
 
 def create_for_each_language(language=str, coding_folder_path=str, carbon_copies_path=str):

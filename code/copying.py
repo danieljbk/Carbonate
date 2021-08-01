@@ -1,6 +1,6 @@
 import os
 from shutil import copyfile
-from path_management import crawl, get_filename_and_specific_directory
+from managing_file_paths import crawl, get_filename_and_specific_directory
 
 
 # copies all contents to folder in /Daniel's Files

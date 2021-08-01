@@ -1,4 +1,4 @@
-from path_management import absolute_path
+from managing_file_paths import absolute_path
 
 
 def get_languages():

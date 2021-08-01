@@ -1,6 +1,6 @@
 import os
 from shutil import rmtree as delete_directory
-from path_management import get_filename_and_specific_directory, crawl
+from managing_file_paths import get_filename_and_specific_directory, crawl
 
 
 # delete carbon_copies made for Python files that no longer exist

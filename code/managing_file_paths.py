@@ -3,7 +3,8 @@ import glob
 from code_editing import replace_problematic_characters
 
 
-def absolute_path(path):  # input relative path, output absolute path
+# input relative path, output absolute path
+def absolute_path(path):
     dirname = os.path.dirname(__file__)
 
     return os.path.join(dirname, path)
@@ -20,7 +21,8 @@ def retrieve_code_from(filepath):
     return code
 
 
-def crawl(filetype=str, path=str):  # list all files using the glob module
+# list all files using the glob module
+def crawl(filetype=str, path=str):
     all_contents = glob.glob(path + "/**/*" + filetype, recursive=True)
 
     # downward from top level. deepest folder runs last (generally)
