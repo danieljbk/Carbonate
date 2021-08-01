@@ -26,7 +26,7 @@ def crawl(filetype=str, path=str):
     all_contents = glob.glob(path + "/**/*" + filetype, recursive=True)
 
     # I wanted to create carbon copies beginning at the highest level.
-    # with this sort, the deepest folder (or really, the longest folder) runs last
+    # with this sort, the deepest folder (or really, the folder with the longest name) runs last
     all_contents.sort(key=len)
 
     return all_contents
