@@ -2,3 +2,6 @@
 .cpp
 .js
 .java
+.json
+.cs
+.txt

@@ -28,16 +28,21 @@ def replace_problematic_characters(code):
     code = code.replace('(', '❪')
     code = code.replace(')', '❫')
     code = code.replace(')', '❫')
+
     # https://unicode-table.com/en/blocks/box-drawing/
     code = code.replace('/', '󠀠╱')
-    # https://unicode-table.com/en/blocks/box-drawing/, greek letter nu could be useful
+
+    # https://unicode-table.com/en/blocks/box-drawing/, greek letter nu could be useful.
     # doing this to preserve actual typed newlines ('\n') inside code
     code = code.replace('\\n', '╲n')
+
     code = code.replace("\r", "\\r")
     code = code.replace("\n", "\\n")
+
     # automatically get rid of empty lines in the beginning
     while list(code)[:2] == ['\\', 'n']:
         code = "".join(list(code)[2:])
+
     # automatically add an empty line in the end
     if list(code)[-2:] != ['\\', 'n', '\\', 'n', ]:
         code += '\\n'
