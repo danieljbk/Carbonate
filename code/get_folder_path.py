@@ -16,3 +16,11 @@ def get_user_general_downloads_path():
     downloads_path += '/Carbon_Copies'
     print(downloads_path)
     return downloads_path
+
+
+def set_folder_paths():
+    coding_folder_path = get_user_input_folder_path("that contains your code files")
+    temporary_carbon_copies_path = get_user_general_downloads_path()
+    relocation_path = get_user_input_folder_path("where you want to save the Carbon Copies to")
+    
+    return coding_folder_path, temporary_carbon_copies_path, relocation_path
