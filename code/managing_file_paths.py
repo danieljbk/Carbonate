@@ -25,7 +25,8 @@ def retrieve_code_from(filepath):
 def crawl(filetype=str, path=str):
     all_contents = glob.glob(path + "/**/*" + filetype, recursive=True)
 
-    # downward from top level. deepest folder runs last (generally)
+    # I wanted to create carbon copies beginning at the highest level.
+    # with this sort, the deepest folder (or really, the longest folder) runs last
     all_contents.sort(key=len)
 
     return all_contents
