@@ -1,6 +1,5 @@
 import os
 import glob
-from code_editing import replace_problematic_characters
 
 
 # input relative path, output absolute path
@@ -15,8 +14,6 @@ def retrieve_code_from(filepath):
     f = open(filepath, "r")
     code = f.read()
     f.close()
-
-    code = replace_problematic_characters(code)
 
     return code
 
