@@ -16,5 +16,4 @@ delete_obsolete_carbon_copies(temporary_carbon_copies_path, coding_folder_path)
 copy_all_carbon_copies(temporary_carbon_copies_path, relocation_path)
 
 # 5. then finally, delete the temporary files from the computer.
-delete_temporary_carbon_copies(
-    temporary_carbon_copies_path)
+delete_temporary_carbon_copies(temporary_carbon_copies_path)
