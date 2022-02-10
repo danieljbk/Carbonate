@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/79312811/126866177-b9710f8a-eac7-417f-8f8e-7972bf10ba7c.png" width="200" height="200">
+<img src="https://user-images.githubusercontent.com/79312811/153317369-1a8cfdaf-68b2-4a2d-89d6-a5b00c335fc5.png" width="500" height="300">
 
 # Carbonate ![build](https://github.com/petersolopov/carbonara/workflows/build/badge.svg)
 Create [carbon.now.sh](https://carbon.now.sh) previews for all of your code files using the [Carbonara API](https://github.com/petersolopov/carbonara).
