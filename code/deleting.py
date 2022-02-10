@@ -35,4 +35,6 @@ def delete_obsolete_carbon_copies(carbon_copies_path=str, coding_folder_path=str
 
 
 def delete_temporary_carbon_copies(carbon_copies_path=str):
+    if not os.path.exists(carbon_copies_path):
+        os.makedirs(carbon_copies_path)
     delete_directory(carbon_copies_path)
