@@ -7,17 +7,19 @@ from managing_file_paths import get_filename_and_specific_directory, crawl
 def delete_obsolete_carbon_copies(carbon_copies_path=str, coding_folder_path=str):
     carbon_copies, python_files, remaining = [], [], []
 
-    for filepath in crawl('.png', carbon_copies_path):
+    for filepath in crawl(".png", carbon_copies_path):
         filename, specific_directory = get_filename_and_specific_directory(
-            '.png', filepath, carbon_copies_path)
-        carbon_copies.append(specific_directory+'/'+filename)
+            ".png", filepath, carbon_copies_path
+        )
+        carbon_copies.append(specific_directory + "/" + filename)
 
-    for filepath in crawl('.py', coding_folder_path):
+    for filepath in crawl(".py", coding_folder_path):
         filename, specific_directory = get_filename_and_specific_directory(
-            '.py', filepath, coding_folder_path)
+            ".py", filepath, coding_folder_path
+        )
         # because carbon files are saved with spaces converted to underscores
-        filename = filename.replace(' ', '_')
-        python_files.append(specific_directory+'/'+filename)
+        filename = filename.replace(" ", "_")
+        python_files.append(specific_directory + "/" + filename)
 
     for x in range(len(carbon_copies)):
         for y in range(len(python_files)):
@@ -31,7 +33,7 @@ def delete_obsolete_carbon_copies(carbon_copies_path=str, coding_folder_path=str
             remaining.append(carbon_copies[x])
 
     for x in remaining:
-        os.remove(carbon_copies_path + x + '.png')
+        os.remove(carbon_copies_path + x + ".png")
 
 
 def delete_temporary_carbon_copies(carbon_copies_path=str):

@@ -30,9 +30,13 @@ def crawl(filetype=str, path=str):
 
 
 def get_filename_and_specific_directory(filetype=str, filepath=str, folder_path=str):
-    filename = ''.join(list(filepath[int(
-        '-'+str(list(reversed(list(filepath))).index('/'))):])[:-len(filetype)])
-    specific_directory = ''.join(list(filepath)[len(
-        list(folder_path)):-len(filename)-len(filetype)-1]).replace(' ', '_')
+    filename = "".join(
+        list(filepath[int("-" + str(list(reversed(list(filepath))).index("/"))) :])[
+            : -len(filetype)
+        ]
+    )
+    specific_directory = "".join(
+        list(filepath)[len(list(folder_path)) : -len(filename) - len(filetype) - 1]
+    ).replace(" ", "_")
 
     return filename, specific_directory
